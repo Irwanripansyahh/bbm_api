@@ -143,7 +143,15 @@ Namun di sisi **API**, endpoint `history/{YYYY-MM-DD}.json` di-generate untuk **
 tanggal** pada rentang `firstDate..lastDate` (lihat `history/index.json`). Jadi kamu
 bisa memanggil **tanggal berapa pun** dalam rentang itu dan mendapat harga yang
 **berlaku** pada tanggal tersebut — mengikuti perubahan terakhir pada/sebelumnya
-(*carry-forward*). Setiap respons memuat:
+(*carry-forward*).
+
+> **Backfill otomatis:** `firstDate` bukan tanggal proyek ini mulai jalan, melainkan
+> **tanggal perubahan harga terakhir** yang dibocorkan field `updatedDate` dari API
+> MyPertamina. Karena harga tidak berubah sejak tanggal itu, harga di semua tanggal
+> setelahnya pasti sama — sehingga riwayat bisa mundur sampai ke sana (mis. `2026-09-02`),
+> bukan hanya sejak hari pertama proyek dijalankan.
+
+Setiap respons memuat:
 
 - `date` — tanggal yang diminta
 - `effectiveDate` — tanggal perubahan harga terakhir yang berlaku pada `date`
@@ -154,9 +162,9 @@ bisa memanggil **tanggal berapa pun** dalam rentang itu dan mendapat harga yang
 curl -s "https://<username>.github.io/<nama-repo>/api/v1/history/2026-12-01.json"
 ```
 
-**Batasan:** tanggal **sebelum** proyek mulai mencatat (`firstDate`) atau **di masa
-depan** (setelah `lastDate`/hari ini) akan mengembalikan `404` — tidak ada sumber
-harga historis Pertamina untuk periode sebelum pencatatan dimulai.
+**Batasan:** tanggal **sebelum `firstDate`** (perubahan harga terakhir yang diketahui)
+atau **di masa depan** (setelah `lastDate`/hari ini) akan mengembalikan `404` — API
+MyPertamina tidak menyediakan harga historis sebelum tanggal perubahan terakhir itu.
 
 ## Lisensi
 

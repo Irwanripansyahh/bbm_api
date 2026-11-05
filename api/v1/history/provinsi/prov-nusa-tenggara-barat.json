@@ -4,7 +4,7 @@
   "unit": "IDR/liter",
   "province": "Prov. Nusa Tenggara Barat",
   "slug": "prov-nusa-tenggara-barat",
-  "firstDate": "2026-11-05",
+  "firstDate": "2026-09-02",
   "lastDate": "2026-11-05",
   "products": [
     "DEXLITE",
@@ -19,7 +19,7 @@
   ],
   "history": [
     {
-      "date": "2026-11-05",
+      "date": "2026-09-02",
       "prices": {
         "DEXLITE": 23700,
         "PERTALITE": 10000,

@@ -202,19 +202,24 @@ async function loadHistory() {
  * seluruh snapshot (termasuk yang baru bila ada).
  */
 async function updateHistory(normalized) {
-  const today = jakartaDate();
+  // Kunci snapshot = TANGGAL HARGA BERLAKU (dari field updatedDate sumber), bukan
+  // tanggal fetch. Dengan begitu riwayat otomatis mundur sampai perubahan harga
+  // terakhir yang dibocorkan API (mis. 2026-09-02), bukan hanya sejak hari ini.
+  const effDate = normalized.sourceUpdatedDate
+    ? jakartaDate(new Date(normalized.sourceUpdatedDate))
+    : jakartaDate();
   const snaps = await loadHistory();
-  const current = snapshotFromNormalized(normalized, today);
+  const current = snapshotFromNormalized(normalized, effDate);
   const latest = snaps[snaps.length - 1];
   const changed = !latest || fingerprint(latest) !== fingerprint(current);
 
   if (changed) {
-    await writeJson(join(HISTORY_DIR, `${today}.json`), current);
-    const idx = snaps.findIndex((s) => s.date === today);
+    await writeJson(join(HISTORY_DIR, `${effDate}.json`), current);
+    const idx = snaps.findIndex((s) => s.date === effDate);
     if (idx >= 0) snaps[idx] = current;
     else snaps.push(current);
     snaps.sort((a, b) => a.date.localeCompare(b.date));
-    console.log(`Snapshot riwayat disimpan untuk ${today}.`);
+    console.log(`Snapshot riwayat disimpan untuk ${effDate} (tanggal harga berlaku).`);
   } else {
     console.log(
       `Harga tidak berubah sejak ${latest.date} — snapshot tidak ditambah.`
