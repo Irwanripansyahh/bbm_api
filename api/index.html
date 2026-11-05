@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dokumentasi API — Harga BBM Pertamina</title>
+    <meta
+      name="description"
+      content="Dokumentasi API statis read-only harga BBM Pertamina per provinsi, termasuk riwayat harga per tanggal."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%BD%3C/text%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --bg: #f4f6f8; --surface: #fff; --surface-2: #f0f2f5;
+        --text: #15202b; --muted: #5b6b7b; --border: #e1e6ea;
+        --brand: #0b7a3b; --brand-dark: #095f2e; --accent: #e4002b;
+        --shadow: 0 1px 3px rgba(16,24,40,.08), 0 1px 2px rgba(16,24,40,.06);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d1419; --surface: #151f27; --surface-2: #1c2932;
+          --text: #e8eef3; --muted: #9bb0c0; --border: #273540;
+          --brand: #27a35a; --brand-dark: #1c8347; --accent: #ff4d6a;
+          --shadow: 0 1px 3px rgba(0,0,0,.4);
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0; background: var(--bg); color: var(--text); line-height: 1.6;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+      header.hero {
+        background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+        color: #fff; padding: 34px 0 26px;
+      }
+      header.hero h1 { margin: 0; font-size: clamp(1.5rem, 4vw, 2.1rem); }
+      header.hero p { margin: 6px 0 0; opacity: .92; }
+      header.hero .back { color: #fff; opacity: .9; font-size: .85rem; text-decoration: none; }
+      header.hero .back:hover { text-decoration: underline; }
+      main { padding: 28px 0 56px; }
+      h2 { margin: 34px 0 10px; font-size: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+      h3 { margin: 22px 0 8px; font-size: 1rem; }
+      p { max-width: 72ch; }
+      a { color: var(--brand); }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        background: var(--surface-2); border: 1px solid var(--border);
+        border-radius: 6px; padding: 1px 6px; font-size: .86em;
+      }
+      pre {
+        margin: 8px 0; background: var(--surface); border: 1px solid var(--border);
+        border-radius: 10px; padding: 14px 16px; overflow-x: auto; box-shadow: var(--shadow);
+      }
+      pre code { background: none; border: 0; padding: 0; font-size: .82rem; white-space: pre; }
+      .status {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px; margin: 16px 0;
+      }
+      .stat {
+        background: var(--surface); border: 1px solid var(--border);
+        border-radius: 10px; padding: 12px 14px; box-shadow: var(--shadow);
+      }
+      .stat .k { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+      .stat .v { font-size: 1.05rem; font-weight: 700; color: var(--brand); word-break: break-word; }
+      .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); box-shadow: var(--shadow); }
+      table { border-collapse: collapse; width: 100%; min-width: 560px; }
+      th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+      thead th { background: var(--surface-2); font-size: .74rem; text-transform: uppercase; letter-spacing: .03em; color: var(--muted); }
+      tbody tr:last-child td { border-bottom: 0; }
+      td code { white-space: nowrap; }
+      .desc { color: var(--muted); font-size: .85rem; display: block; margin-top: 3px; }
+      .badge { display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .04em; padding: 3px 8px; border-radius: 6px; background: color-mix(in srgb, var(--brand) 16%, transparent); color: var(--brand); }
+      .try { white-space: nowrap; font-weight: 600; }
+      .note { background: var(--surface); border-left: 4px solid var(--brand); border-radius: 8px; padding: 12px 16px; margin: 14px 0; }
+      .warn { border-left-color: var(--accent); }
+      footer { border-top: 1px solid var(--border); padding: 22px 0 40px; color: var(--muted); font-size: .85rem; }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <a class="back" href="../">&larr; Kembali ke situs harga BBM</a>
+        <h1>⛽ API Harga BBM Pertamina</h1>
+        <p>API statis read-only (JSON) — harga terkini & riwayat per tanggal.</p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <p>
+        Data diambil dari
+        <a href="https://mypertamina.id/about/product-price" target="_blank" rel="noopener">MyPertamina</a>,
+        dinormalkan, lalu di-hosting sebagai berkas JSON statis di GitHub Pages.
+        Karena melayani header <code>Access-Control-Allow-Origin: *</code>, API ini
+        <strong>bisa dipanggil dari domain mana pun</strong> (CORS aktif). Diperbarui
+        otomatis via GitHub Actions.
+      </p>
+
+      <h2>Status (live)</h2>
+      <div class="status" id="status">
+        <div class="stat"><div class="k">Base URL</div><div class="v" id="s-base">…</div></div>
+        <div class="stat"><div class="k">Provinsi</div><div class="v" id="s-prov">…</div></div>
+        <div class="stat"><div class="k">Produk</div><div class="v" id="s-prod">…</div></div>
+        <div class="stat"><div class="k">Data per</div><div class="v" id="s-date">…</div></div>
+        <div class="stat"><div class="k">Riwayat dari</div><div class="v" id="s-first">…</div></div>
+        <div class="stat"><div class="k">Riwayat s/d</div><div class="v" id="s-last">…</div></div>
+      </div>
+
+      <h2>Base URL</h2>
+      <pre><code id="base-url">./v1/</code></pre>
+      <p>Semua path di bawah relatif terhadap base URL tersebut.</p>
+
+      <h2>Endpoint</h2>
+      <div class="table-wrap">
+        <table id="endpoints">
+          <thead>
+            <tr><th>Metode</th><th>Path &amp; keterangan</th><th>Coba</th></tr>
+          </thead>
+          <tbody><!-- diisi JS; fallback statis di bawah --></tbody>
+        </table>
+      </div>
+
+      <h2>Format umum</h2>
+      <ul>
+        <li>Satuan harga: <code>IDR/liter</code> (Rupiah per liter).</li>
+        <li><code>price</code> bertipe angka; <code>null</code> = produk tidak tersedia di provinsi tsb.</li>
+        <li><code>slug</code> dipakai pada path, mis. <code>prov-dki-jakarta</code>, <code>pertamax</code>. Daftar lengkap: <code>v1/provinsi.json</code> &amp; <code>v1/produk.json</code>.</li>
+      </ul>
+
+      <h2>Contoh respons</h2>
+
+      <h3><code>v1/index.json</code> — ringkasan + daftar</h3>
+      <pre><code>{
+  "api": "Harga BBM Pertamina",
+  "version": "v1",
+  "status": "success",
+  "fetchedAt": "2026-11-05T05:39:02.996Z",
+  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
+  "unit": "IDR/liter",
+  "totalProvinces": 40,
+  "totalProducts": 9,
+  "endpoints": { "nasional": "v1/nasional.json", "...": "..." },
+  "provinces": [ { "province": "Prov. DKI Jakarta", "slug": "prov-dki-jakarta" } ],
+  "products":  [ { "product": "PERTAMAX", "slug": "pertamax" } ]
+}</code></pre>
+
+      <h3><code>v1/provinsi/{slug}.json</code> — harga terkini satu provinsi</h3>
+      <pre><code>{
+  "status": "success",
+  "unit": "IDR/liter",
+  "province": "Prov. DKI Jakarta",
+  "slug": "prov-dki-jakarta",
+  "updatedDate": "2026-09-02T00:01:00.000Z",
+  "prices": [
+    { "product": "PERTAMAX", "slug": "pertamax", "price": 15950 },
+    { "product": "PERTAMAX GREEN 95", "slug": "pertamax-green-95", "price": null }
+  ]
+}</code></pre>
+
+      <h3><code>v1/produk/{slug}.json</code> — satu produk di semua provinsi (termurah dulu)</h3>
+      <pre><code>{
+  "status": "success",
+  "product": "PERTAMAX",
+  "slug": "pertamax",
+  "prices": [
+    { "province": "Free Trade Zone (FTZ) Sabang", "slug": "free-trade-zone-ftz-sabang", "price": 14950 },
+    { "province": "Prov. Bali", "slug": "prov-bali", "price": 15950 }
+  ]
+}</code></pre>
+
+      <h3><code>v1/history/index.json</code> — rentang tanggal &amp; daftar perubahan</h3>
+      <p>
+        Dipakai untuk mengetahui <strong>rentang tanggal</strong> yang bisa dipanggil
+        (<code>firstDate</code>…<code>lastDate</code>) dan tanggal-tanggal saat harga
+        <strong>berubah</strong> (<code>snapshotDates</code>).
+      </p>
+      <pre><code>{
+  "status": "success",
+  "source": "https://mypertamina.id/about/product-price",
+  "unit": "IDR/liter",
+  "note": "Panggil history/{YYYY-MM-DD}.json untuk tanggal mana pun pada rentang firstDate..lastDate ...",
+  "firstDate": "2026-09-02",   // tanggal paling awal yang tersedia (= perubahan harga terakhir yang diketahui)
+  "lastDate": "2026-11-05",    // tanggal terbaru (hari ini, WIB)
+  "totalDays": 65,             // jumlah tanggal yang bisa dipanggil
+  "totalSnapshots": 1,         // jumlah titik perubahan harga
+  "snapshotDates": [ "2026-09-02" ]   // tanggal-tanggal saat harga berubah
+}</code></pre>
+
+      <h3><code>v1/history/{YYYY-MM-DD}.json</code> — harga yang berlaku pada tanggal itu</h3>
+      <p>
+        Bisa dipanggil untuk <strong>tanggal berapa pun</strong> dalam rentang
+        <code>firstDate..lastDate</code>. Harga mengikuti perubahan terakhir pada/sebelum
+        tanggal tsb (<em>carry-forward</em>). <code>v1/history/latest.json</code> = alias tanggal terbaru.
+      </p>
+      <pre><code>{
+  "status": "success",
+  "date": "2026-10-01",          // tanggal yang diminta
+  "effectiveDate": "2026-09-02", // perubahan harga terakhir yang berlaku pada "date"
+  "capturedAt": "2026-11-05T05:39:02.996Z",
+  "unit": "IDR/liter",
+  "provinces": [
+    { "province": "Prov. DKI Jakarta", "slug": "prov-dki-jakarta",
+      "prices": [ { "product": "PERTAMAX", "slug": "pertamax", "price": 15950 } ] }
+  ]
+}</code></pre>
+
+      <h3><code>v1/history/provinsi/{slug}.json</code> — deret waktu satu provinsi</h3>
+      <pre><code>{
+  "status": "success",
+  "province": "Prov. DKI Jakarta",
+  "slug": "prov-dki-jakarta",
+  "firstDate": "2026-09-02",
+  "lastDate": "2026-11-05",
+  "products": [ "DEXLITE", "PERTALITE", "PERTAMAX", "..." ],
+  "history": [
+    { "date": "2026-09-02", "prices": { "PERTAMAX": 15950, "PERTALITE": 10000 } }
+  ]
+}</code></pre>
+
+      <h2>Contoh pemakaian</h2>
+      <h3>cURL</h3>
+      <pre><code id="ex-curl">curl -s "./v1/provinsi/prov-dki-jakarta.json"</code></pre>
+      <h3>JavaScript (fetch)</h3>
+      <pre><code id="ex-js">const res = await fetch("./v1/nasional.json");
+const data = await res.json();
+console.log(data.provinces);</code></pre>
+
+      <div class="note warn">
+        <strong>Batasan riwayat.</strong> Tanggal <strong>sebelum <code>firstDate</code></strong>
+        (perubahan harga terakhir yang diketahui dari field <code>updatedDate</code>) atau
+        <strong>di masa depan</strong> (setelah <code>lastDate</code>) akan mengembalikan
+        <code>404</code>. API MyPertamina tidak menyediakan harga historis sebelum tanggal itu.
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        Sumber data: PT Pertamina (Persero) / MyPertamina — bersifat indikatif, selalu cek SPBU resmi.
+        Proyek open-source; data diperbarui otomatis via GitHub Actions.
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var apiRoot = new URL("./", document.baseURI).href; // .../api/
+        var v1 = new URL("v1/", apiRoot).href;
+
+        // Base URL & contoh pakai URL absolut
+        document.getElementById("base-url").textContent = v1;
+        document.getElementById("s-base").textContent = v1;
+        document.getElementById("ex-curl").textContent =
+          'curl -s "' + v1 + 'provinsi/prov-dki-jakarta.json"';
+        document.getElementById("ex-js").textContent =
+          'const res = await fetch(\n  "' + v1 + 'nasional.json"\n);\n' +
+          "const data = await res.json();\nconsole.log(data.provinces);";
+
+        // Tabel endpoint
+        var eps = [
+          ["GET", "v1/index.json", "Ringkasan + daftar semua provinsi, produk & endpoint."],
+          ["GET", "v1/nasional.json", "Harga terkini seluruh provinsi dalam satu berkas."],
+          ["GET", "v1/provinsi.json", "Daftar provinsi beserta slug."],
+          ["GET", "v1/produk.json", "Daftar produk beserta slug."],
+          ["GET", "v1/provinsi/{slug}.json", "Harga terkini satu provinsi."],
+          ["GET", "v1/produk/{slug}.json", "Harga satu produk di semua provinsi (termurah dulu)."],
+          ["GET", "v1/history/index.json", "Rentang tanggal (firstDate..lastDate) & daftar tanggal perubahan."],
+          ["GET", "v1/history/{YYYY-MM-DD}.json", "Harga yang berlaku pada tanggal mana pun (carry-forward)."],
+          ["GET", "v1/history/latest.json", "Alias snapshot riwayat tanggal terbaru."],
+          ["GET", "v1/history/provinsi/{slug}.json", "Deret waktu harga satu provinsi."],
+        ];
+        var tbody = document.querySelector("#endpoints tbody");
+        tbody.innerHTML = eps
+          .map(function (e) {
+            var method = e[0], path = e[1], desc = e[2];
+            // contoh path yang pasti ada agar tautan demo tidak 404
+            var sample = path
+              .replace("{slug}", "prov-dki-jakarta")
+              .replace("v1/history/{YYYY-MM-DD}.json", "v1/history/latest.json");
+            var href = new URL(sample, apiRoot).href;
+            return (
+              "<tr><td><span class='badge'>" + method + "</span></td>" +
+              "<td><code>" + path + "</code>" +
+              "<span class='desc'>" + desc + "</span></td>" +
+              "<td class='try'><a href='" + href + "' target='_blank' rel='noopener'>buka ↗</a></td></tr>"
+            );
+          })
+          .join("");
+
+        // Status live
+        function set(id, val) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = val == null ? "–" : String(val);
+        }
+        fetch(v1 + "index.json")
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            set("s-prov", d.totalProvinces);
+            set("s-prod", d.totalProducts);
+            set("s-date", (d.fetchedAt || "").slice(0, 10) || "–");
+          })
+          .catch(function () {});
+        fetch(v1 + "history/index.json")
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            set("s-first", d.firstDate);
+            set("s-last", d.lastDate);
+          })
+          .catch(function () {});
+      })();
+    </script>
+  </body>
+</html>

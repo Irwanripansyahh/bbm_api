@@ -194,6 +194,10 @@ console.log(data.provinces);`;
         diperbarui otomatis via GitHub Actions; harga lama tersimpan per tanggal
         di endpoint <code>history</code>.
       </p>
+      <p>
+        📖 <a href="${escapeHtml(apiBase)}"><strong>Buka halaman dokumentasi API lengkap</strong> ↗</a>
+        (contoh bentuk respons tiap endpoint + status live).
+      </p>
 
       <h3>Base URL</h3>
       <div class="codeblock">

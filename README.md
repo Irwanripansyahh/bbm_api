@@ -102,6 +102,9 @@ Selain halaman web, proyek ini menghasilkan **API statis read-only** berupa berk
 JSON di `api/v1/`. Karena di-hosting GitHub Pages (header
 `Access-Control-Allow-Origin: *`), API ini bisa dipanggil dari domain mana pun (CORS aktif).
 
+📖 **Halaman dokumentasi API** (dengan contoh respons & status live):
+`https://<username>.github.io/<nama-repo>/api/`
+
 Base URL: `https://<username>.github.io/<nama-repo>/api/v1/`
 
 | Endpoint | Keterangan |
