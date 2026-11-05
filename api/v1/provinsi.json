@@ -1,0 +1,210 @@
+{
+  "status": "success",
+  "fetchedAt": "2026-11-05T05:39:20.829Z",
+  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
+  "source": "https://mypertamina.id/about/product-price",
+  "unit": "IDR/liter",
+  "total": 40,
+  "data": [
+    {
+      "province": "Free Trade Zone (FTZ) Batam",
+      "slug": "free-trade-zone-ftz-batam",
+      "endpoint": "v1/provinsi/free-trade-zone-ftz-batam.json"
+    },
+    {
+      "province": "Free Trade Zone (FTZ) Sabang",
+      "slug": "free-trade-zone-ftz-sabang",
+      "endpoint": "v1/provinsi/free-trade-zone-ftz-sabang.json"
+    },
+    {
+      "province": "Prov. Aceh",
+      "slug": "prov-aceh",
+      "endpoint": "v1/provinsi/prov-aceh.json"
+    },
+    {
+      "province": "Prov. Bali",
+      "slug": "prov-bali",
+      "endpoint": "v1/provinsi/prov-bali.json"
+    },
+    {
+      "province": "Prov. Bangka-Belitung",
+      "slug": "prov-bangka-belitung",
+      "endpoint": "v1/provinsi/prov-bangka-belitung.json"
+    },
+    {
+      "province": "Prov. Banten",
+      "slug": "prov-banten",
+      "endpoint": "v1/provinsi/prov-banten.json"
+    },
+    {
+      "province": "Prov. Bengkulu",
+      "slug": "prov-bengkulu",
+      "endpoint": "v1/provinsi/prov-bengkulu.json"
+    },
+    {
+      "province": "Prov. DI Yogyakarta",
+      "slug": "prov-di-yogyakarta",
+      "endpoint": "v1/provinsi/prov-di-yogyakarta.json"
+    },
+    {
+      "province": "Prov. DKI Jakarta",
+      "slug": "prov-dki-jakarta",
+      "endpoint": "v1/provinsi/prov-dki-jakarta.json"
+    },
+    {
+      "province": "Prov. Gorontalo",
+      "slug": "prov-gorontalo",
+      "endpoint": "v1/provinsi/prov-gorontalo.json"
+    },
+    {
+      "province": "Prov. Jambi",
+      "slug": "prov-jambi",
+      "endpoint": "v1/provinsi/prov-jambi.json"
+    },
+    {
+      "province": "Prov. Jawa Barat",
+      "slug": "prov-jawa-barat",
+      "endpoint": "v1/provinsi/prov-jawa-barat.json"
+    },
+    {
+      "province": "Prov. Jawa Tengah",
+      "slug": "prov-jawa-tengah",
+      "endpoint": "v1/provinsi/prov-jawa-tengah.json"
+    },
+    {
+      "province": "Prov. Jawa Timur",
+      "slug": "prov-jawa-timur",
+      "endpoint": "v1/provinsi/prov-jawa-timur.json"
+    },
+    {
+      "province": "Prov. Kalimantan Barat",
+      "slug": "prov-kalimantan-barat",
+      "endpoint": "v1/provinsi/prov-kalimantan-barat.json"
+    },
+    {
+      "province": "Prov. Kalimantan Selatan",
+      "slug": "prov-kalimantan-selatan",
+      "endpoint": "v1/provinsi/prov-kalimantan-selatan.json"
+    },
+    {
+      "province": "Prov. Kalimantan Tengah",
+      "slug": "prov-kalimantan-tengah",
+      "endpoint": "v1/provinsi/prov-kalimantan-tengah.json"
+    },
+    {
+      "province": "Prov. Kalimantan Timur",
+      "slug": "prov-kalimantan-timur",
+      "endpoint": "v1/provinsi/prov-kalimantan-timur.json"
+    },
+    {
+      "province": "Prov. Kalimantan Utara",
+      "slug": "prov-kalimantan-utara",
+      "endpoint": "v1/provinsi/prov-kalimantan-utara.json"
+    },
+    {
+      "province": "Prov. Kepulauan Riau",
+      "slug": "prov-kepulauan-riau",
+      "endpoint": "v1/provinsi/prov-kepulauan-riau.json"
+    },
+    {
+      "province": "Prov. Lampung",
+      "slug": "prov-lampung",
+      "endpoint": "v1/provinsi/prov-lampung.json"
+    },
+    {
+      "province": "Prov. Maluku",
+      "slug": "prov-maluku",
+      "endpoint": "v1/provinsi/prov-maluku.json"
+    },
+    {
+      "province": "Prov. Maluku Utara",
+      "slug": "prov-maluku-utara",
+      "endpoint": "v1/provinsi/prov-maluku-utara.json"
+    },
+    {
+      "province": "Prov. Nusa Tenggara Barat",
+      "slug": "prov-nusa-tenggara-barat",
+      "endpoint": "v1/provinsi/prov-nusa-tenggara-barat.json"
+    },
+    {
+      "province": "Prov. Nusa Tenggara Timur",
+      "slug": "prov-nusa-tenggara-timur",
+      "endpoint": "v1/provinsi/prov-nusa-tenggara-timur.json"
+    },
+    {
+      "province": "Prov. Papua",
+      "slug": "prov-papua",
+      "endpoint": "v1/provinsi/prov-papua.json"
+    },
+    {
+      "province": "Prov. Papua Barat",
+      "slug": "prov-papua-barat",
+      "endpoint": "v1/provinsi/prov-papua-barat.json"
+    },
+    {
+      "province": "Prov. Papua Barat Daya",
+      "slug": "prov-papua-barat-daya",
+      "endpoint": "v1/provinsi/prov-papua-barat-daya.json"
+    },
+    {
+      "province": "Prov. Papua Pegunungan",
+      "slug": "prov-papua-pegunungan",
+      "endpoint": "v1/provinsi/prov-papua-pegunungan.json"
+    },
+    {
+      "province": "Prov. Papua Selatan",
+      "slug": "prov-papua-selatan",
+      "endpoint": "v1/provinsi/prov-papua-selatan.json"
+    },
+    {
+      "province": "Prov. Papua Tengah",
+      "slug": "prov-papua-tengah",
+      "endpoint": "v1/provinsi/prov-papua-tengah.json"
+    },
+    {
+      "province": "Prov. Riau",
+      "slug": "prov-riau",
+      "endpoint": "v1/provinsi/prov-riau.json"
+    },
+    {
+      "province": "Prov. Sulawesi Barat",
+      "slug": "prov-sulawesi-barat",
+      "endpoint": "v1/provinsi/prov-sulawesi-barat.json"
+    },
+    {
+      "province": "Prov. Sulawesi Selatan",
+      "slug": "prov-sulawesi-selatan",
+      "endpoint": "v1/provinsi/prov-sulawesi-selatan.json"
+    },
+    {
+      "province": "Prov. Sulawesi Tengah",
+      "slug": "prov-sulawesi-tengah",
+      "endpoint": "v1/provinsi/prov-sulawesi-tengah.json"
+    },
+    {
+      "province": "Prov. Sulawesi Tenggara",
+      "slug": "prov-sulawesi-tenggara",
+      "endpoint": "v1/provinsi/prov-sulawesi-tenggara.json"
+    },
+    {
+      "province": "Prov. Sulawesi Utara",
+      "slug": "prov-sulawesi-utara",
+      "endpoint": "v1/provinsi/prov-sulawesi-utara.json"
+    },
+    {
+      "province": "Prov. Sumatera Barat",
+      "slug": "prov-sumatera-barat",
+      "endpoint": "v1/provinsi/prov-sumatera-barat.json"
+    },
+    {
+      "province": "Prov. Sumatera Selatan",
+      "slug": "prov-sumatera-selatan",
+      "endpoint": "v1/provinsi/prov-sumatera-selatan.json"
+    },
+    {
+      "province": "Prov. Sumatera Utara",
+      "slug": "prov-sumatera-utara",
+      "endpoint": "v1/provinsi/prov-sumatera-utara.json"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "fetchedAt": "2026-11-05T05:39:20.829Z",
+  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
+  "source": "https://mypertamina.id/about/product-price",
+  "unit": "IDR/liter",
+  "province": "Prov. Kalimantan Utara",
+  "slug": "prov-kalimantan-utara",
+  "products": [
+    "DEXLITE",
+    "PERTALITE",
+    "PERTAMAX",
+    "PERTAMAX GREEN 95",
+    "PERTAMAX PERTASHOP",
+    "PERTAMAX TURBO",
+    "PERTAMINA BIOSOLAR NON SUBSIDI",
+    "PERTAMINA BIOSOLAR SUBSIDI",
+    "PERTAMINA DEX"
+  ],
+  "history": [
+    {
+      "date": "2026-11-05",
+      "prices": {
+        "DEXLITE": 24750,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16650,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16550,
+        "PERTAMAX TURBO": 20450,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 26300
+      }
+    }
+  ]
+}

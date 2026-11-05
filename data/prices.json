@@ -1,8 +1,9 @@
 {
-  "fetchedAt": "2026-11-05T05:25:23.731Z",
+  "fetchedAt": "2026-11-05T05:39:20.829Z",
   "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
   "source": "https://mypertamina.id/about/product-price",
   "apiSource": "https://api.web.mypertamina.id/price",
+  "unit": "IDR/liter",
   "totalProvinces": 40,
   "products": [
     "DEXLITE",
@@ -18,6 +19,7 @@
   "provinces": [
     {
       "province": "Free Trade Zone (FTZ) Batam",
+      "slug": "free-trade-zone-ftz-batam",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 22500,
@@ -33,6 +35,7 @@
     },
     {
       "province": "Free Trade Zone (FTZ) Sabang",
+      "slug": "free-trade-zone-ftz-sabang",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 22150,
@@ -48,6 +51,7 @@
     },
     {
       "province": "Prov. Aceh",
+      "slug": "prov-aceh",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -63,6 +67,7 @@
     },
     {
       "province": "Prov. Bali",
+      "slug": "prov-bali",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 23700,
@@ -78,6 +83,7 @@
     },
     {
       "province": "Prov. Bangka-Belitung",
+      "slug": "prov-bangka-belitung",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -93,6 +99,7 @@
     },
     {
       "province": "Prov. Banten",
+      "slug": "prov-banten",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 23700,
@@ -108,6 +115,7 @@
     },
     {
       "province": "Prov. Bengkulu",
+      "slug": "prov-bengkulu",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -123,6 +131,7 @@
     },
     {
       "province": "Prov. DI Yogyakarta",
+      "slug": "prov-di-yogyakarta",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 23700,
@@ -138,6 +147,7 @@
     },
     {
       "province": "Prov. DKI Jakarta",
+      "slug": "prov-dki-jakarta",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 23700,
@@ -153,6 +163,7 @@
     },
     {
       "province": "Prov. Gorontalo",
+      "slug": "prov-gorontalo",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -168,6 +179,7 @@
     },
     {
       "province": "Prov. Jambi",
+      "slug": "prov-jambi",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -183,6 +195,7 @@
     },
     {
       "province": "Prov. Jawa Barat",
+      "slug": "prov-jawa-barat",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 23700,
@@ -198,6 +211,7 @@
     },
     {
       "province": "Prov. Jawa Tengah",
+      "slug": "prov-jawa-tengah",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 23700,
@@ -213,6 +227,7 @@
     },
     {
       "province": "Prov. Jawa Timur",
+      "slug": "prov-jawa-timur",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 23700,
@@ -228,6 +243,7 @@
     },
     {
       "province": "Prov. Kalimantan Barat",
+      "slug": "prov-kalimantan-barat",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -243,6 +259,7 @@
     },
     {
       "province": "Prov. Kalimantan Selatan",
+      "slug": "prov-kalimantan-selatan",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -258,6 +275,7 @@
     },
     {
       "province": "Prov. Kalimantan Tengah",
+      "slug": "prov-kalimantan-tengah",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -273,6 +291,7 @@
     },
     {
       "province": "Prov. Kalimantan Timur",
+      "slug": "prov-kalimantan-timur",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -288,6 +307,7 @@
     },
     {
       "province": "Prov. Kalimantan Utara",
+      "slug": "prov-kalimantan-utara",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24750,
@@ -303,6 +323,7 @@
     },
     {
       "province": "Prov. Kepulauan Riau",
+      "slug": "prov-kepulauan-riau",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24750,
@@ -318,6 +339,7 @@
     },
     {
       "province": "Prov. Lampung",
+      "slug": "prov-lampung",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -333,6 +355,7 @@
     },
     {
       "province": "Prov. Maluku",
+      "slug": "prov-maluku",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -348,6 +371,7 @@
     },
     {
       "province": "Prov. Maluku Utara",
+      "slug": "prov-maluku-utara",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -363,6 +387,7 @@
     },
     {
       "province": "Prov. Nusa Tenggara Barat",
+      "slug": "prov-nusa-tenggara-barat",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 23700,
@@ -378,6 +403,7 @@
     },
     {
       "province": "Prov. Nusa Tenggara Timur",
+      "slug": "prov-nusa-tenggara-timur",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 23700,
@@ -393,6 +419,7 @@
     },
     {
       "province": "Prov. Papua",
+      "slug": "prov-papua",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -408,6 +435,7 @@
     },
     {
       "province": "Prov. Papua Barat",
+      "slug": "prov-papua-barat",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -423,6 +451,7 @@
     },
     {
       "province": "Prov. Papua Barat Daya",
+      "slug": "prov-papua-barat-daya",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -438,6 +467,7 @@
     },
     {
       "province": "Prov. Papua Pegunungan",
+      "slug": "prov-papua-pegunungan",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -453,6 +483,7 @@
     },
     {
       "province": "Prov. Papua Selatan",
+      "slug": "prov-papua-selatan",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -468,6 +499,7 @@
     },
     {
       "province": "Prov. Papua Tengah",
+      "slug": "prov-papua-tengah",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -483,6 +515,7 @@
     },
     {
       "province": "Prov. Riau",
+      "slug": "prov-riau",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24750,
@@ -498,6 +531,7 @@
     },
     {
       "province": "Prov. Sulawesi Barat",
+      "slug": "prov-sulawesi-barat",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -513,6 +547,7 @@
     },
     {
       "province": "Prov. Sulawesi Selatan",
+      "slug": "prov-sulawesi-selatan",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -528,6 +563,7 @@
     },
     {
       "province": "Prov. Sulawesi Tengah",
+      "slug": "prov-sulawesi-tengah",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -543,6 +579,7 @@
     },
     {
       "province": "Prov. Sulawesi Tenggara",
+      "slug": "prov-sulawesi-tenggara",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -558,6 +595,7 @@
     },
     {
       "province": "Prov. Sulawesi Utara",
+      "slug": "prov-sulawesi-utara",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -573,6 +611,7 @@
     },
     {
       "province": "Prov. Sumatera Barat",
+      "slug": "prov-sumatera-barat",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24750,
@@ -588,6 +627,7 @@
     },
     {
       "province": "Prov. Sumatera Selatan",
+      "slug": "prov-sumatera-selatan",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,
@@ -603,6 +643,7 @@
     },
     {
       "province": "Prov. Sumatera Utara",
+      "slug": "prov-sumatera-utara",
       "updatedDate": "2026-09-02T00:01:00.000Z",
       "prices": {
         "DEXLITE": 24200,

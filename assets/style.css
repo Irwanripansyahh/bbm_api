@@ -253,6 +253,97 @@ td.price-col.unavail {
   margin-top: 4px;
 }
 
+/* Dokumentasi API */
+.api-doc h3 {
+  margin: 28px 0 10px;
+  font-size: 1.05rem;
+}
+.api-doc p {
+  max-width: 70ch;
+}
+.api-doc code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 0.85em;
+}
+.codeblock {
+  position: relative;
+  margin: 8px 0 4px;
+}
+.codeblock pre {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  box-shadow: var(--shadow);
+}
+.codeblock pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--text);
+  white-space: pre;
+}
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.copy-btn:hover {
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+.api-table td,
+.api-table th {
+  white-space: normal;
+  vertical-align: top;
+}
+.api-table code {
+  white-space: nowrap;
+}
+.ep-desc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+.ep-try a {
+  color: var(--brand);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--brand) 16%, transparent);
+  color: var(--brand);
+}
+.api-notes {
+  max-width: 70ch;
+  padding-left: 20px;
+}
+.api-notes li {
+  margin: 4px 0;
+}
+
 .error {
   background: var(--surface);
   border: 1px solid var(--accent);

@@ -1,0 +1,57 @@
+{
+  "status": "success",
+  "fetchedAt": "2026-11-05T05:39:20.829Z",
+  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
+  "source": "https://mypertamina.id/about/product-price",
+  "unit": "IDR/liter",
+  "province": "Free Trade Zone (FTZ) Batam",
+  "slug": "free-trade-zone-ftz-batam",
+  "updatedDate": "2026-09-02T00:01:00.000Z",
+  "prices": [
+    {
+      "product": "DEXLITE",
+      "slug": "dexlite",
+      "price": 22500
+    },
+    {
+      "product": "PERTALITE",
+      "slug": "pertalite",
+      "price": 10000
+    },
+    {
+      "product": "PERTAMAX",
+      "slug": "pertamax",
+      "price": 15150
+    },
+    {
+      "product": "PERTAMAX GREEN 95",
+      "slug": "pertamax-green-95",
+      "price": null
+    },
+    {
+      "product": "PERTAMAX PERTASHOP",
+      "slug": "pertamax-pertashop",
+      "price": 15050
+    },
+    {
+      "product": "PERTAMAX TURBO",
+      "slug": "pertamax-turbo",
+      "price": 18550
+    },
+    {
+      "product": "PERTAMINA BIOSOLAR NON SUBSIDI",
+      "slug": "pertamina-biosolar-non-subsidi",
+      "price": null
+    },
+    {
+      "product": "PERTAMINA BIOSOLAR SUBSIDI",
+      "slug": "pertamina-biosolar-subsidi",
+      "price": 6800
+    },
+    {
+      "product": "PERTAMINA DEX",
+      "slug": "pertamina-dex",
+      "price": 23950
+    }
+  ]
+}

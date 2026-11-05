@@ -1,0 +1,55 @@
+{
+  "status": "success",
+  "fetchedAt": "2026-11-05T05:39:20.829Z",
+  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
+  "source": "https://mypertamina.id/about/product-price",
+  "unit": "IDR/liter",
+  "total": 9,
+  "data": [
+    {
+      "product": "DEXLITE",
+      "slug": "dexlite",
+      "endpoint": "v1/produk/dexlite.json"
+    },
+    {
+      "product": "PERTALITE",
+      "slug": "pertalite",
+      "endpoint": "v1/produk/pertalite.json"
+    },
+    {
+      "product": "PERTAMAX",
+      "slug": "pertamax",
+      "endpoint": "v1/produk/pertamax.json"
+    },
+    {
+      "product": "PERTAMAX GREEN 95",
+      "slug": "pertamax-green-95",
+      "endpoint": "v1/produk/pertamax-green-95.json"
+    },
+    {
+      "product": "PERTAMAX PERTASHOP",
+      "slug": "pertamax-pertashop",
+      "endpoint": "v1/produk/pertamax-pertashop.json"
+    },
+    {
+      "product": "PERTAMAX TURBO",
+      "slug": "pertamax-turbo",
+      "endpoint": "v1/produk/pertamax-turbo.json"
+    },
+    {
+      "product": "PERTAMINA BIOSOLAR NON SUBSIDI",
+      "slug": "pertamina-biosolar-non-subsidi",
+      "endpoint": "v1/produk/pertamina-biosolar-non-subsidi.json"
+    },
+    {
+      "product": "PERTAMINA BIOSOLAR SUBSIDI",
+      "slug": "pertamina-biosolar-subsidi",
+      "endpoint": "v1/produk/pertamina-biosolar-subsidi.json"
+    },
+    {
+      "product": "PERTAMINA DEX",
+      "slug": "pertamina-dex",
+      "endpoint": "v1/produk/pertamina-dex.json"
+    }
+  ]
+}

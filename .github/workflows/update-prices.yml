@@ -32,11 +32,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- data/prices.json; then
-            echo "Tidak ada perubahan harga."
+          git add data api
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan."
           else
-            git add data/prices.json
             git commit -m "chore: perbarui harga BBM ($(date -u +%Y-%m-%d))"
             git push
-            echo "Harga diperbarui dan di-push."
+            echo "Data diperbarui dan di-push."
           fi

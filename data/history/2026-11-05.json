@@ -1,0 +1,619 @@
+{
+  "date": "2026-11-05",
+  "fetchedAt": "2026-11-05T05:39:02.996Z",
+  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
+  "unit": "IDR/liter",
+  "products": [
+    "DEXLITE",
+    "PERTALITE",
+    "PERTAMAX",
+    "PERTAMAX GREEN 95",
+    "PERTAMAX PERTASHOP",
+    "PERTAMAX TURBO",
+    "PERTAMINA BIOSOLAR NON SUBSIDI",
+    "PERTAMINA BIOSOLAR SUBSIDI",
+    "PERTAMINA DEX"
+  ],
+  "provinces": [
+    {
+      "province": "Free Trade Zone (FTZ) Batam",
+      "slug": "free-trade-zone-ftz-batam",
+      "prices": {
+        "DEXLITE": 22500,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15150,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 15050,
+        "PERTAMAX TURBO": 18550,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 23950
+      }
+    },
+    {
+      "province": "Free Trade Zone (FTZ) Sabang",
+      "slug": "free-trade-zone-ftz-sabang",
+      "prices": {
+        "DEXLITE": 22150,
+        "PERTALITE": 10000,
+        "PERTAMAX": 14950,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 14850,
+        "PERTAMAX TURBO": null,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": null
+      }
+    },
+    {
+      "province": "Prov. Aceh",
+      "slug": "prov-aceh",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Bali",
+      "slug": "prov-bali",
+      "prices": {
+        "DEXLITE": 23700,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15950,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 15850,
+        "PERTAMAX TURBO": 19600,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25200
+      }
+    },
+    {
+      "province": "Prov. Bangka-Belitung",
+      "slug": "prov-bangka-belitung",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Banten",
+      "slug": "prov-banten",
+      "prices": {
+        "DEXLITE": 23700,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15950,
+        "PERTAMAX GREEN 95": 19150,
+        "PERTAMAX PERTASHOP": 15850,
+        "PERTAMAX TURBO": 19600,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25200
+      }
+    },
+    {
+      "province": "Prov. Bengkulu",
+      "slug": "prov-bengkulu",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. DI Yogyakarta",
+      "slug": "prov-di-yogyakarta",
+      "prices": {
+        "DEXLITE": 23700,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15950,
+        "PERTAMAX GREEN 95": 19150,
+        "PERTAMAX PERTASHOP": 15850,
+        "PERTAMAX TURBO": 19600,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25200
+      }
+    },
+    {
+      "province": "Prov. DKI Jakarta",
+      "slug": "prov-dki-jakarta",
+      "prices": {
+        "DEXLITE": 23700,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15950,
+        "PERTAMAX GREEN 95": 19150,
+        "PERTAMAX PERTASHOP": 15850,
+        "PERTAMAX TURBO": 19600,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25200
+      }
+    },
+    {
+      "province": "Prov. Gorontalo",
+      "slug": "prov-gorontalo",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Jambi",
+      "slug": "prov-jambi",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Jawa Barat",
+      "slug": "prov-jawa-barat",
+      "prices": {
+        "DEXLITE": 23700,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15950,
+        "PERTAMAX GREEN 95": 19150,
+        "PERTAMAX PERTASHOP": 15850,
+        "PERTAMAX TURBO": 19600,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25200
+      }
+    },
+    {
+      "province": "Prov. Jawa Tengah",
+      "slug": "prov-jawa-tengah",
+      "prices": {
+        "DEXLITE": 23700,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15950,
+        "PERTAMAX GREEN 95": 19150,
+        "PERTAMAX PERTASHOP": 15850,
+        "PERTAMAX TURBO": 19600,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25200
+      }
+    },
+    {
+      "province": "Prov. Jawa Timur",
+      "slug": "prov-jawa-timur",
+      "prices": {
+        "DEXLITE": 23700,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15950,
+        "PERTAMAX GREEN 95": 19150,
+        "PERTAMAX PERTASHOP": 15850,
+        "PERTAMAX TURBO": 19600,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25200
+      }
+    },
+    {
+      "province": "Prov. Kalimantan Barat",
+      "slug": "prov-kalimantan-barat",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Kalimantan Selatan",
+      "slug": "prov-kalimantan-selatan",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Kalimantan Tengah",
+      "slug": "prov-kalimantan-tengah",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Kalimantan Timur",
+      "slug": "prov-kalimantan-timur",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Kalimantan Utara",
+      "slug": "prov-kalimantan-utara",
+      "prices": {
+        "DEXLITE": 24750,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16650,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16550,
+        "PERTAMAX TURBO": 20450,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 26300
+      }
+    },
+    {
+      "province": "Prov. Kepulauan Riau",
+      "slug": "prov-kepulauan-riau",
+      "prices": {
+        "DEXLITE": 24750,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16650,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16550,
+        "PERTAMAX TURBO": 20450,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 26300
+      }
+    },
+    {
+      "province": "Prov. Lampung",
+      "slug": "prov-lampung",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Maluku",
+      "slug": "prov-maluku",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": null,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": null
+      }
+    },
+    {
+      "province": "Prov. Maluku Utara",
+      "slug": "prov-maluku-utara",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": null,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": null
+      }
+    },
+    {
+      "province": "Prov. Nusa Tenggara Barat",
+      "slug": "prov-nusa-tenggara-barat",
+      "prices": {
+        "DEXLITE": 23700,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15950,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 15850,
+        "PERTAMAX TURBO": 19600,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25200
+      }
+    },
+    {
+      "province": "Prov. Nusa Tenggara Timur",
+      "slug": "prov-nusa-tenggara-timur",
+      "prices": {
+        "DEXLITE": 23700,
+        "PERTALITE": 10000,
+        "PERTAMAX": 15950,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 15850,
+        "PERTAMAX TURBO": 19600,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": 23600,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25200
+      }
+    },
+    {
+      "province": "Prov. Papua",
+      "slug": "prov-papua",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": null
+      }
+    },
+    {
+      "province": "Prov. Papua Barat",
+      "slug": "prov-papua-barat",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": null,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Papua Barat Daya",
+      "slug": "prov-papua-barat-daya",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": null,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Papua Pegunungan",
+      "slug": "prov-papua-pegunungan",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": null,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": null
+      }
+    },
+    {
+      "province": "Prov. Papua Selatan",
+      "slug": "prov-papua-selatan",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": null,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": null
+      }
+    },
+    {
+      "province": "Prov. Papua Tengah",
+      "slug": "prov-papua-tengah",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": null,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": null
+      }
+    },
+    {
+      "province": "Prov. Riau",
+      "slug": "prov-riau",
+      "prices": {
+        "DEXLITE": 24750,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16650,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16550,
+        "PERTAMAX TURBO": 20450,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 26300
+      }
+    },
+    {
+      "province": "Prov. Sulawesi Barat",
+      "slug": "prov-sulawesi-barat",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Sulawesi Selatan",
+      "slug": "prov-sulawesi-selatan",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Sulawesi Tengah",
+      "slug": "prov-sulawesi-tengah",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Sulawesi Tenggara",
+      "slug": "prov-sulawesi-tenggara",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Sulawesi Utara",
+      "slug": "prov-sulawesi-utara",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Sumatera Barat",
+      "slug": "prov-sumatera-barat",
+      "prices": {
+        "DEXLITE": 24750,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16650,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16550,
+        "PERTAMAX TURBO": 20450,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 26300
+      }
+    },
+    {
+      "province": "Prov. Sumatera Selatan",
+      "slug": "prov-sumatera-selatan",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    },
+    {
+      "province": "Prov. Sumatera Utara",
+      "slug": "prov-sumatera-utara",
+      "prices": {
+        "DEXLITE": 24200,
+        "PERTALITE": 10000,
+        "PERTAMAX": 16300,
+        "PERTAMAX GREEN 95": null,
+        "PERTAMAX PERTASHOP": 16200,
+        "PERTAMAX TURBO": 20000,
+        "PERTAMINA BIOSOLAR NON SUBSIDI": null,
+        "PERTAMINA BIOSOLAR SUBSIDI": 6800,
+        "PERTAMINA DEX": 25750
+      }
+    }
+  ]
+}

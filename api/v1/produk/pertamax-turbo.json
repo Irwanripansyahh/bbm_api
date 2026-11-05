@@ -1,0 +1,211 @@
+{
+  "status": "success",
+  "fetchedAt": "2026-11-05T05:39:20.829Z",
+  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
+  "source": "https://mypertamina.id/about/product-price",
+  "unit": "IDR/liter",
+  "product": "PERTAMAX TURBO",
+  "slug": "pertamax-turbo",
+  "prices": [
+    {
+      "province": "Free Trade Zone (FTZ) Batam",
+      "slug": "free-trade-zone-ftz-batam",
+      "price": 18550
+    },
+    {
+      "province": "Prov. Bali",
+      "slug": "prov-bali",
+      "price": 19600
+    },
+    {
+      "province": "Prov. Banten",
+      "slug": "prov-banten",
+      "price": 19600
+    },
+    {
+      "province": "Prov. DI Yogyakarta",
+      "slug": "prov-di-yogyakarta",
+      "price": 19600
+    },
+    {
+      "province": "Prov. DKI Jakarta",
+      "slug": "prov-dki-jakarta",
+      "price": 19600
+    },
+    {
+      "province": "Prov. Jawa Barat",
+      "slug": "prov-jawa-barat",
+      "price": 19600
+    },
+    {
+      "province": "Prov. Jawa Tengah",
+      "slug": "prov-jawa-tengah",
+      "price": 19600
+    },
+    {
+      "province": "Prov. Jawa Timur",
+      "slug": "prov-jawa-timur",
+      "price": 19600
+    },
+    {
+      "province": "Prov. Nusa Tenggara Barat",
+      "slug": "prov-nusa-tenggara-barat",
+      "price": 19600
+    },
+    {
+      "province": "Prov. Nusa Tenggara Timur",
+      "slug": "prov-nusa-tenggara-timur",
+      "price": 19600
+    },
+    {
+      "province": "Prov. Aceh",
+      "slug": "prov-aceh",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Bangka-Belitung",
+      "slug": "prov-bangka-belitung",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Bengkulu",
+      "slug": "prov-bengkulu",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Gorontalo",
+      "slug": "prov-gorontalo",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Jambi",
+      "slug": "prov-jambi",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Kalimantan Barat",
+      "slug": "prov-kalimantan-barat",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Kalimantan Selatan",
+      "slug": "prov-kalimantan-selatan",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Kalimantan Tengah",
+      "slug": "prov-kalimantan-tengah",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Kalimantan Timur",
+      "slug": "prov-kalimantan-timur",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Lampung",
+      "slug": "prov-lampung",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Papua",
+      "slug": "prov-papua",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Sulawesi Barat",
+      "slug": "prov-sulawesi-barat",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Sulawesi Selatan",
+      "slug": "prov-sulawesi-selatan",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Sulawesi Tengah",
+      "slug": "prov-sulawesi-tengah",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Sulawesi Tenggara",
+      "slug": "prov-sulawesi-tenggara",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Sulawesi Utara",
+      "slug": "prov-sulawesi-utara",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Sumatera Selatan",
+      "slug": "prov-sumatera-selatan",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Sumatera Utara",
+      "slug": "prov-sumatera-utara",
+      "price": 20000
+    },
+    {
+      "province": "Prov. Kalimantan Utara",
+      "slug": "prov-kalimantan-utara",
+      "price": 20450
+    },
+    {
+      "province": "Prov. Kepulauan Riau",
+      "slug": "prov-kepulauan-riau",
+      "price": 20450
+    },
+    {
+      "province": "Prov. Riau",
+      "slug": "prov-riau",
+      "price": 20450
+    },
+    {
+      "province": "Prov. Sumatera Barat",
+      "slug": "prov-sumatera-barat",
+      "price": 20450
+    },
+    {
+      "province": "Free Trade Zone (FTZ) Sabang",
+      "slug": "free-trade-zone-ftz-sabang",
+      "price": null
+    },
+    {
+      "province": "Prov. Maluku",
+      "slug": "prov-maluku",
+      "price": null
+    },
+    {
+      "province": "Prov. Maluku Utara",
+      "slug": "prov-maluku-utara",
+      "price": null
+    },
+    {
+      "province": "Prov. Papua Barat",
+      "slug": "prov-papua-barat",
+      "price": null
+    },
+    {
+      "province": "Prov. Papua Barat Daya",
+      "slug": "prov-papua-barat-daya",
+      "price": null
+    },
+    {
+      "province": "Prov. Papua Pegunungan",
+      "slug": "prov-papua-pegunungan",
+      "price": null
+    },
+    {
+      "province": "Prov. Papua Selatan",
+      "slug": "prov-papua-selatan",
+      "price": null
+    },
+    {
+      "province": "Prov. Papua Tengah",
+      "slug": "prov-papua-tengah",
+      "price": null
+    }
+  ]
+}
