@@ -138,9 +138,8 @@ function renderApiView() {
   const apiBase = new URL("api/", document.baseURI).href; // termasuk trailing slash
   const exProv = data.provinces[0]?.slug || "prov-dki-jakarta";
   const exProd = slugify(data.products[0] || "pertamax");
-  const exDate = data.sourceUpdatedDate
-    ? new Date(data.sourceUpdatedDate).toISOString().slice(0, 10)
-    : "2026-01-01";
+  const exDate =
+    data.date || new Date(data.fetchedAt || Date.now()).toISOString().slice(0, 10);
 
   const endpoints = [
     ["v1/index.json", "Ringkasan + daftar semua provinsi, produk, & endpoint."],
@@ -149,11 +148,15 @@ function renderApiView() {
     ["v1/produk.json", "Daftar produk BBM beserta slug-nya."],
     [`v1/provinsi/${exProv}.json`, "Harga terkini satu provinsi (ganti slug)."],
     [`v1/produk/${exProd}.json`, "Harga satu produk di semua provinsi, termurah dulu."],
-    ["v1/history/index.json", "Daftar tanggal riwayat yang tersedia."],
-    [`v1/history/${exDate}.json`, "Snapshot harga pada tanggal tertentu."],
+    ["v1/history/index.json", "Rentang tanggal tersedia (firstDate..lastDate) & daftar perubahan."],
+    [
+      `v1/history/${exDate}.json`,
+      "Harga yang BERLAKU pada tanggal mana pun dalam rentang (carry-forward).",
+    ],
+    ["v1/history/latest.json", "Alias snapshot riwayat tanggal terbaru."],
     [
       `v1/history/provinsi/${exProv}.json`,
-      "Deret waktu harga satu provinsi (per tanggal).",
+      "Deret waktu harga satu provinsi (per tanggal perubahan).",
     ],
   ];
 
@@ -228,6 +231,14 @@ console.log(data.provinces);`;
           exProv
         )}</code>, <code>${escapeHtml(exProd)}</code>).</li>
         <li>Lihat daftar lengkap slug di <code>v1/provinsi.json</code> &amp; <code>v1/produk.json</code>.</li>
+        <li>
+          <strong>Riwayat:</strong> <code>history/{YYYY-MM-DD}.json</code> bisa
+          dipanggil untuk tanggal mana pun dalam rentang
+          <code>firstDate..lastDate</code> (lihat <code>history/index.json</code>).
+          Respons memuat <code>effectiveDate</code> = tanggal perubahan harga
+          terakhir yang berlaku. Tanggal sebelum pencatatan dimulai atau di masa
+          depan akan <code>404</code>.
+        </li>
       </ul>
     </div>`;
 

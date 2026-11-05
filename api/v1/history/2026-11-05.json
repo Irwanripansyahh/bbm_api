@@ -1,10 +1,11 @@
 {
   "status": "success",
-  "fetchedAt": "2026-11-05T05:39:02.996Z",
-  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
   "source": "https://mypertamina.id/about/product-price",
   "unit": "IDR/liter",
   "date": "2026-11-05",
+  "effectiveDate": "2026-11-05",
+  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
+  "capturedAt": "2026-11-05T05:39:02.996Z",
   "products": [
     {
       "product": "DEXLITE",

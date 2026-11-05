@@ -54,6 +54,16 @@ function jakartaDate(d = new Date()) {
   }).format(d);
 }
 
+/** Hasilkan setiap tanggal (YYYY-MM-DD) dari start s/d end, inklusif. */
+function* dateRange(startStr, endStr) {
+  const d = new Date(startStr + "T00:00:00Z");
+  const end = new Date(endStr + "T00:00:00Z");
+  while (d.getTime() <= end.getTime()) {
+    yield d.toISOString().slice(0, 10);
+    d.setUTCDate(d.getUTCDate() + 1);
+  }
+}
+
 async function writeJson(file, obj) {
   await mkdir(dirname(file), { recursive: true });
   await writeFile(file, JSON.stringify(obj, null, 2) + "\n", "utf8");
@@ -128,6 +138,7 @@ function normalize(raw) {
 
   return {
     fetchedAt: new Date().toISOString(),
+    date: jakartaDate(), // tanggal kalender WIB saat pengambilan
     sourceUpdatedDate: latestSourceDate ? latestSourceDate.toISOString() : null,
     source: SOURCE_PAGE,
     apiSource: API_URL,
@@ -273,6 +284,7 @@ async function writeApi(n, snaps) {
       perProduk: "v1/produk/{slug}.json",
       riwayatIndex: "v1/history/index.json",
       riwayatTanggal: "v1/history/{YYYY-MM-DD}.json",
+      riwayatTerkini: "v1/history/latest.json",
       riwayatProvinsi: "v1/history/provinsi/{slug}.json",
     },
     provinces: provincesMeta,
@@ -341,48 +353,81 @@ async function writeApi(n, snaps) {
     });
   }
 
-  await writeHistoryApi(base, snaps);
+  await writeHistoryApi(n, snaps);
 }
 
-async function writeHistoryApi(base, snaps) {
+async function writeHistoryApi(n, snaps) {
   const histDir = join(API_DIR, "history");
   await mkdir(join(histDir, "provinsi"), { recursive: true });
 
-  // index riwayat
-  await writeJson(join(histDir, "index.json"), {
-    ...base,
-    total: snaps.length,
-    firstDate: snaps[0]?.date ?? null,
-    lastDate: snaps[snaps.length - 1]?.date ?? null,
-    dates: snaps.map((s) => ({
-      date: s.date,
-      sourceUpdatedDate: s.sourceUpdatedDate,
-      fetchedAt: s.fetchedAt,
-      endpoint: `v1/history/${s.date}.json`,
-    })),
-  });
+  // Envelope stabil (tanpa waktu pengambilan yang berubah tiap run) agar file
+  // tanggal-tanggal lama tidak ikut berubah dan riwayat git tetap ringkas.
+  const histBase = { status: "success", source: n.source, unit: n.unit };
 
-  // snapshot per tanggal (bentuk seperti nasional.json)
-  for (const s of snaps) {
-    await writeJson(join(histDir, `${s.date}.json`), {
-      ...base,
-      date: s.date,
-      fetchedAt: s.fetchedAt,
-      sourceUpdatedDate: s.sourceUpdatedDate,
-      products: s.products.map((p) => ({ product: p, slug: slugify(p) })),
-      provinces: s.provinces.map((p) => ({
-        province: p.province,
-        slug: p.slug,
-        prices: s.products.map((product) => ({
-          product,
-          slug: slugify(product),
-          price: p.prices[product] ?? null,
-        })),
-      })),
+  if (snaps.length === 0) {
+    await writeJson(join(histDir, "index.json"), {
+      ...histBase,
+      firstDate: null,
+      lastDate: null,
+      totalDays: 0,
+      totalSnapshots: 0,
+      snapshotDates: [],
     });
+    return;
   }
 
-  // deret waktu per provinsi
+  const firstDate = snaps[0].date;
+  const lastDate = n.date; // hari ini (WIB); selalu >= tanggal snapshot terakhir
+  const days = [...dateRange(firstDate, lastDate)];
+
+  const productMeta = (s) => s.products.map((p) => ({ product: p, slug: slugify(p) }));
+  const toProvinces = (s) =>
+    s.provinces.map((p) => ({
+      province: p.province,
+      slug: p.slug,
+      prices: s.products.map((product) => ({
+        product,
+        slug: slugify(product),
+        price: p.prices[product] ?? null,
+      })),
+    }));
+  const dayPayload = (reqDate, s) => ({
+    ...histBase,
+    date: reqDate, // tanggal yang diminta
+    effectiveDate: s.date, // snapshot perubahan terakhir yang berlaku pada tanggal itu
+    sourceUpdatedDate: s.sourceUpdatedDate,
+    capturedAt: s.fetchedAt,
+    products: productMeta(s),
+    provinces: toProvinces(s),
+  });
+
+  // index riwayat
+  await writeJson(join(histDir, "index.json"), {
+    ...histBase,
+    note:
+      "Panggil history/{YYYY-MM-DD}.json untuk tanggal mana pun pada rentang firstDate..lastDate. " +
+      "Harga mengikuti perubahan terakhir pada/sebelum tanggal tsb (carry-forward). " +
+      "Tanggal di luar rentang akan 404.",
+    firstDate,
+    lastDate,
+    totalDays: days.length,
+    totalSnapshots: snaps.length,
+    snapshotDates: snaps.map((s) => s.date),
+  });
+
+  // Satu file untuk SETIAP tanggal pada rentang (carry-forward dari snapshot terakhir).
+  let si = 0;
+  let lastDay = null;
+  for (const d of days) {
+    while (si + 1 < snaps.length && snaps[si + 1].date <= d) si++;
+    const payload = dayPayload(d, snaps[si]);
+    await writeJson(join(histDir, `${d}.json`), payload);
+    lastDay = payload;
+  }
+  // alias tanggal terbaru
+  if (lastDay) await writeJson(join(histDir, "latest.json"), lastDay);
+
+  // deret waktu per provinsi (semua snapshot perubahan)
   const provNames = new Map(); // slug -> nama
   const productSet = new Set();
   for (const s of snaps) {
@@ -402,9 +447,11 @@ async function writeHistoryApi(base, snaps) {
       };
     });
     await writeJson(join(histDir, "provinsi", `${slug}.json`), {
-      ...base,
+      ...histBase,
       province,
       slug,
+      firstDate,
+      lastDate,
       products: allProducts,
       history,
     });

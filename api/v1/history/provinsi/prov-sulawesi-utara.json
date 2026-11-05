@@ -1,11 +1,11 @@
 {
   "status": "success",
-  "fetchedAt": "2026-11-05T05:44:55.408Z",
-  "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
   "source": "https://mypertamina.id/about/product-price",
   "unit": "IDR/liter",
   "province": "Prov. Sulawesi Utara",
   "slug": "prov-sulawesi-utara",
+  "firstDate": "2026-11-05",
+  "lastDate": "2026-11-05",
   "products": [
     "DEXLITE",
     "PERTALITE",

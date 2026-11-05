@@ -112,9 +112,10 @@ Base URL: `https://<username>.github.io/<nama-repo>/api/v1/`
 | `produk.json` | Daftar produk beserta `slug` |
 | `provinsi/{slug}.json` | Harga terkini satu provinsi |
 | `produk/{slug}.json` | Harga satu produk di semua provinsi (termurah dulu) |
-| `history/index.json` | Daftar tanggal riwayat yang tersedia |
-| `history/{YYYY-MM-DD}.json` | Snapshot harga pada tanggal tertentu |
-| `history/provinsi/{slug}.json` | Deret waktu harga satu provinsi (per tanggal) |
+| `history/index.json` | Rentang tanggal tersedia (`firstDate`..`lastDate`) & daftar tanggal perubahan |
+| `history/{YYYY-MM-DD}.json` | Harga yang **berlaku** pada tanggal mana pun dalam rentang (carry-forward) |
+| `history/latest.json` | Alias snapshot riwayat tanggal terbaru |
+| `history/provinsi/{slug}.json` | Deret waktu harga satu provinsi (per tanggal perubahan) |
 
 Contoh:
 
@@ -132,12 +133,30 @@ Catatan format: satuan `IDR/liter`; `price` berupa angka, dan `null` berarti
 produk tidak tersedia di provinsi itu. Dokumentasi lengkap dengan URL otomatis
 juga tersedia pada **tab "API"** di halaman web.
 
-## Riwayat harga (per tanggal)
+## Riwayat harga (panggil tanggal mana pun)
 
 Setiap kali data berubah, harga disimpan sebagai snapshot bertanggal (zona WIB) di
-`data/history/YYYY-MM-DD.json`. Snapshot baru **hanya ditambahkan bila harga berubah**
-dibanding snapshot terakhir, sehingga riwayat tetap ringkas. Riwayat dapat diakses
-lewat endpoint `api/v1/history/...` di atas.
+`data/history/YYYY-MM-DD.json`. Snapshot **hanya ditambahkan bila harga berubah**
+dibanding snapshot terakhir, sehingga penyimpanan tetap ringkas.
+
+Namun di sisi **API**, endpoint `history/{YYYY-MM-DD}.json` di-generate untuk **setiap
+tanggal** pada rentang `firstDate..lastDate` (lihat `history/index.json`). Jadi kamu
+bisa memanggil **tanggal berapa pun** dalam rentang itu dan mendapat harga yang
+**berlaku** pada tanggal tersebut — mengikuti perubahan terakhir pada/sebelumnya
+(*carry-forward*). Setiap respons memuat:
+
+- `date` — tanggal yang diminta
+- `effectiveDate` — tanggal perubahan harga terakhir yang berlaku pada `date`
+- `capturedAt` — kapan snapshot itu diambil
+
+```bash
+# contoh: harga yang berlaku pada 1 Desember 2026
+curl -s "https://<username>.github.io/<nama-repo>/api/v1/history/2026-12-01.json"
+```
+
+**Batasan:** tanggal **sebelum** proyek mulai mencatat (`firstDate`) atau **di masa
+depan** (setelah `lastDate`/hari ini) akan mengembalikan `404` — tidak ada sumber
+harga historis Pertamina untuk periode sebelum pencatatan dimulai.
 
 ## Lisensi
 
