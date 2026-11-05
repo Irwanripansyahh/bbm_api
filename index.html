@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harga BBM Pertamina</title>
+    <meta
+      name="description"
+      content="Daftar harga BBM Pertamina terbaru per provinsi se-Indonesia, diambil dari MyPertamina."
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%BD%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>⛽ Harga BBM Pertamina</h1>
+        <p class="subtitle">
+          Daftar harga bahan bakar per provinsi se-Indonesia.
+        </p>
+        <p class="meta" id="meta-line">Memuat data…</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="controls">
+        <div class="tabs" role="tablist">
+          <button class="tab is-active" data-view="province" role="tab">
+            Per Provinsi
+          </button>
+          <button class="tab" data-view="product" role="tab">Per Produk</button>
+        </div>
+
+        <div class="selector">
+          <label id="selector-label" for="selector">Provinsi</label>
+          <select id="selector"></select>
+        </div>
+      </div>
+
+      <section id="content" class="content" aria-live="polite">
+        <p class="placeholder">Memuat data…</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          Sumber data:
+          <a
+            href="https://mypertamina.id/about/product-price"
+            target="_blank"
+            rel="noopener"
+            >MyPertamina</a
+          >. Harga bersifat indikatif; selalu cek SPBU resmi untuk kepastian.
+        </p>
+        <p class="muted">
+          Proyek open-source. Data diperbarui otomatis via GitHub Actions.
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "pertamina-bbm-price",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Situs statis daftar harga BBM Pertamina per provinsi, data dari MyPertamina, hosting di GitHub Pages.",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-prices.mjs",
+    "serve": "node --run serve:py || python3 -m http.server 8080",
+    "serve:py": "python3 -m http.server 8080"
+  },
+  "license": "MIT"
+}

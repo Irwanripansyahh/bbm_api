@@ -1,0 +1,42 @@
+name: Perbarui Harga BBM
+
+on:
+  schedule:
+    # Setiap hari pukul 22:00 UTC (05:00 WIB). Cron GitHub memakai zona UTC.
+    - cron: "0 22 * * *"
+  workflow_dispatch: {} # bisa dijalankan manual dari tab Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Ambil harga terbaru
+        run: node scripts/fetch-prices.mjs
+
+      - name: Commit jika ada perubahan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/prices.json; then
+            echo "Tidak ada perubahan harga."
+          else
+            git add data/prices.json
+            git commit -m "chore: perbarui harga BBM ($(date -u +%Y-%m-%d))"
+            git push
+            echo "Harga diperbarui dan di-push."
+          fi
