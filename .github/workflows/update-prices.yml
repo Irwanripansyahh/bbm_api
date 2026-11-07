@@ -2,8 +2,10 @@ name: Perbarui Harga BBM
 
 on:
   schedule:
-    # Setiap hari pukul 22:00 UTC (05:00 WIB). Cron GitHub memakai zona UTC.
-    - cron: "0 22 * * *"
+    # Setiap hari pukul 18:50 UTC (02:50 WITA / 01:50 WIB). Cron GitHub memakai zona UTC.
+    # Sengaja tidak di menit :00 — awal jam adalah waktu tersibuk GitHub Actions dan
+    # jadwal sering tertunda lama; dengan begini job diharapkan mulai sekitar 03:00 WITA.
+    - cron: "50 18 * * *"
   workflow_dispatch: {} # bisa dijalankan manual dari tab Actions
 
 permissions:
@@ -36,7 +38,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan."
           else
-            git commit -m "chore: perbarui harga BBM ($(date -u +%Y-%m-%d))"
+            git commit -m "chore: perbarui harga BBM ($(TZ=Asia/Jakarta date +%Y-%m-%d))"
             git push
             echo "Data diperbarui dan di-push."
           fi
