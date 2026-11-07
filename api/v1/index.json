@@ -2,7 +2,7 @@
   "api": "Harga BBM Pertamina",
   "version": "v1",
   "status": "success",
-  "fetchedAt": "2026-11-07T01:43:16.816Z",
+  "fetchedAt": "2026-11-07T22:19:09.862Z",
   "sourceUpdatedDate": "2026-09-02T00:01:00.000Z",
   "source": "https://mypertamina.id/about/product-price",
   "unit": "IDR/liter",
