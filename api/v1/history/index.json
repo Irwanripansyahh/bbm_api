@@ -4,8 +4,8 @@
   "unit": "IDR/liter",
   "note": "Panggil history/{YYYY-MM-DD}.json untuk tanggal mana pun pada rentang firstDate..lastDate. Harga mengikuti perubahan terakhir pada/sebelum tanggal tsb (carry-forward). Tanggal di luar rentang akan 404.",
   "firstDate": "2026-09-02",
-  "lastDate": "2026-11-08",
-  "totalDays": 68,
+  "lastDate": "2026-11-09",
+  "totalDays": 69,
   "totalSnapshots": 1,
   "snapshotDates": [
     "2026-09-02"
